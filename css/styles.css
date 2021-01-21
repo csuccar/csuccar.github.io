@@ -10122,7 +10122,26 @@ img::-moz-selection {
     margin-right: 0;
   }
 }
+
+/*
+header.masthead::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(16, 97, 173, 0.281);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+*/
+
 header.masthead {
+  position: relative;
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
@@ -10205,6 +10224,10 @@ header.masthead .masthead-heading {
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   font-size: 1.25rem;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
   opacity: 1;
@@ -10212,13 +10235,14 @@ header.masthead .masthead-heading {
 #portfolio .portfolio-item .portfolio-caption {
   padding: 1.5rem;
   text-align: center;
-  background-color: #fff;
+  background-color: #212529;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
   font-size: 1.5rem;
   font-family: "Century Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   margin-bottom: 0;
+  color: white;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
   font-style: italic;
@@ -10456,7 +10480,7 @@ section#contact .section-heading {
   color: #fff;
 }
 section#contact form#contactForm .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 section#contact form#contactForm .form-group input,
 section#contact form#contactForm .form-group textarea {
